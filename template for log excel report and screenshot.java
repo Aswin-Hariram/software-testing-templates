@@ -63,8 +63,9 @@ public class TestRunner extends Base{
         s1.selectByValue("India");
 
 
-        String path = Screenshot.getScreenShot(driver, "Slack_screenshot");
+        String path = Reporter.captureScreenShot("Filename");
         test.addScreenCaptureFromPath(path);
+        Screenshot.getScreenShot(driver, "Slack_screenshot");
         
         test.log(Status.PASS, "Test process completed");
         LoggerHandler.logInfo("Test process Completed");
